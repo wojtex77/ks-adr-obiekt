@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>50</y>
+      <w>260</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Uzytkownik
+--
+id : integer
+login : string
+haslo : string
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>260</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>KsiazkaAdresowa
+--
+idZalogowanegoUzytkownika : integer
+idOstatniegoAdresata : integer
+idUsunietegoAdresata : integer
+--
+rejestracjaUzytkownika(): void
+logowanieUzytkownika (): integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

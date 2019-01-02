@@ -1,0 +1,1 @@
+# ks-adr-obiekt
