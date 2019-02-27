@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>320</x>
-      <y>60</y>
+      <y>30</y>
       <w>130</w>
       <h>210</h>
     </coordinates>
@@ -22,7 +22,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>30</y>
+      <y>0</y>
       <w>250</w>
       <h>310</h>
     </coordinates>
@@ -30,6 +30,7 @@
 --
 - UzytkownikMenedzer : uzytkownikMenedzer
 --
+KsiazkaAdresowa()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -37,7 +38,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>370</y>
+      <y>340</y>
       <w>550</w>
       <h>280</h>
     </coordinates>
@@ -49,6 +50,7 @@
 + rejestracjaUzytkownika(): void
 + logowanieUzytkownika (): integer
 + wypiszWszystkichUzytkownikow() : void
++ wczytajUzytkownikowZPliku() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika () : integer
 - czyIstniejeLogin() : bool</panel_attributes>
@@ -58,9 +60,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>660</y>
+      <y>630</y>
       <w>550</w>
-      <h>140</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
@@ -69,6 +71,7 @@
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku() : void
++ wczytajUzytkownikowZPliku() : vector &lt;Uzytkownik&gt; uzytkownicy
 - czyPlikJestPusty() : bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
 
@@ -79,7 +82,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>820</y>
+      <y>850</y>
       <w>270</w>
       <h>120</h>
     </coordinates>

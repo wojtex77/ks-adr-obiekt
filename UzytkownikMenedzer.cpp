@@ -1,5 +1,10 @@
 #include "UzytkownikMenedzer.h"
 
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
+    PlikZUzytkownikami plik;
+    uzytkownicy=plik.wczytajUzytkownikowZPliku();
+};
+
 void UzytkownikMenedzer::rejestracjaUzytkownika(){
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika ();
 

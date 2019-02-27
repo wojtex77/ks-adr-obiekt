@@ -14,6 +14,8 @@ class PlikZUzytkownikami {
     string nazwaPlikuZUzytkownikami;
     bool czyPlikJestPusty();
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+
 
     fstream plikTekstowy;
 
@@ -21,6 +23,7 @@ class PlikZUzytkownikami {
 public:
     PlikZUzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
+    vector <Uzytkownik> wczytajUzytkownikowZPliku();
 
 };
 
