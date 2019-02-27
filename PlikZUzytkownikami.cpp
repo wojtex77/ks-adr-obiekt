@@ -53,11 +53,6 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
 };
 
 
-PlikZUzytkownikami::PlikZUzytkownikami()
-{
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-}
-
 
 bool PlikZUzytkownikami::czyPlikJestPusty(fstream *plikTekstowy)
 {

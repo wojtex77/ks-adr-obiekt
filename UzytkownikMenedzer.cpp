@@ -1,15 +1,13 @@
 #include "UzytkownikMenedzer.h"
 
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
-    PlikZUzytkownikami plik;
-    uzytkownicy=plik.wczytajUzytkownikowZPliku();
+    uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPliku();
 };
 
 void UzytkownikMenedzer::rejestracjaUzytkownika(){
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika ();
 
     uzytkownicy.push_back(uzytkownik);
-    PlikZUzytkownikami plikZUzytkownikami;
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
