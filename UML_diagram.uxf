@@ -31,7 +31,8 @@
 - UzytkownikMenedzer : uzytkownikMenedzer
 --
 KsiazkaAdresowa()
-</panel_attributes>
+rejestracjaUzytkownika() : void
+wypiszWszystkichUzytkownikow() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -46,9 +47,10 @@ KsiazkaAdresowa()
 --
 - idZalogowanegoUzytkownika : integer
 - uzytkownicy : vector &lt;Uzytkownik&gt;
+- plikZUzytkownikami : plikZUzytkownikami
 --
++ UzytkownikMenedzer()
 + rejestracjaUzytkownika(): void
-+ logowanieUzytkownika (): integer
 + wypiszWszystkichUzytkownikow() : void
 + wczytajUzytkownikowZPliku() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik
@@ -67,14 +69,13 @@ KsiazkaAdresowa()
     <panel_attributes>PlikZUzytkownikami
 --
 - nazwaPlikuZUzytkownikami : String
-- plikTekstowy : fstream
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku() : void
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownik&gt; uzytkownicy
 - czyPlikJestPusty() : bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
-
+- pobierzDaneUzytkownika : Uzytkownik
 </panel_attributes>
     <additional_attributes/>
   </element>
