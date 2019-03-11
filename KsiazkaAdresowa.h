@@ -12,6 +12,7 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
 
     void wyswietlMenuLogowania();
+    void wyswietlMenuUzytkownika();
     int logowanieUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
@@ -22,6 +23,7 @@ public:
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
         };
     int menuLogowania();
+    int menuUzytkownika(int IdZalogowanegoUzytkownika);
 
 };
 

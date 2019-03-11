@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa ("Uzytkownicy.txt");
-    cout << ksiazkaAdresowa.menuLogowania();
+    cout << ksiazkaAdresowa.menuUzytkownika(ksiazkaAdresowa.menuLogowania());
 
     return 0;
 }
