@@ -18,6 +18,7 @@ class KsiazkaAdresowa
     void wypiszWszystkichUzytkownikow();
 
 
+
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();

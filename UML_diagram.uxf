@@ -34,6 +34,7 @@ KsiazkaAdresowa()
 - rejestracjaUzytkownika() : void
 - wypiszWszystkichUzytkownikow() : void
 - wyswietlMenuLogowania () : void
+- wyswietlMenuUzytkownika () : void
 - logowanieUzytkownika() : int
 + menuLogowania() : int
 + menuUzytkownika() : void
@@ -61,7 +62,8 @@ KsiazkaAdresowa()
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika () : integer
 - czyIstniejeLogin() : bool
-+ logowanieUzytkownika() : int</panel_attributes>
++ logowanieUzytkownika() : int
++ zmianaHaslaZalogowanegoUzytkownika() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -82,6 +84,7 @@ KsiazkaAdresowa()
 - czyPlikJestPusty() : bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
 - pobierzDaneUzytkownika : Uzytkownik
++ zapiszWszystkichUzytkownikowDoPliku() : void
 </panel_attributes>
     <additional_attributes/>
   </element>

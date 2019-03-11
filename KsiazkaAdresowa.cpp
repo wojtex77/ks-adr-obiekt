@@ -134,7 +134,7 @@ int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
         }
         case ('7'):
         {
-            cout << "W trakcie opracowywania";
+            uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
             Sleep(1000);
             break;
         }
