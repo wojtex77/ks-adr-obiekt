@@ -3,12 +3,11 @@
 
 using namespace std;
 
+
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa ("Uzytkownicy.txt");
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    cout << ksiazkaAdresowa.menuLogowania();
 
     return 0;
 }

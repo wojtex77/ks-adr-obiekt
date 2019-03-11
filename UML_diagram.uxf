@@ -31,8 +31,10 @@
 - UzytkownikMenedzer : uzytkownikMenedzer
 --
 KsiazkaAdresowa()
-rejestracjaUzytkownika() : void
-wypiszWszystkichUzytkownikow() : void</panel_attributes>
++ rejestracjaUzytkownika() : void
++ wypiszWszystkichUzytkownikow() : void
++ wyswietlMenuLogowania () : void
++ logowanieUzytkownika() : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -55,7 +57,8 @@ wypiszWszystkichUzytkownikow() : void</panel_attributes>
 + wczytajUzytkownikowZPliku() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika () : integer
-- czyIstniejeLogin() : bool</panel_attributes>
+- czyIstniejeLogin() : bool
++ logowanieUzytkownika() : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
