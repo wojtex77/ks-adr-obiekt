@@ -1,5 +1,10 @@
 #include "AdresatMenedzer.h"
 
+void AdresatMenedzer::wczytajAdresatowZPliku()
+{
+    adresaci=plikZAdresatami.wczytajAdresatowZPliku();
+};
+
 void AdresatMenedzer::dodawanieAdresata(int idUzytkownika)
 {
     Adresat adresat;
@@ -27,6 +32,9 @@ void AdresatMenedzer::dodawanieAdresata(int idUzytkownika)
     cin >> temp;
     adresat.UstawAdres(temp);
     adresaci.push_back(adresat);
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
+    cout << endl << "Adresat dodany pomyslnie" << endl << endl;
+    system("pause");
 };
 
 int AdresatMenedzer::pobierzIdNowegoAdresata()

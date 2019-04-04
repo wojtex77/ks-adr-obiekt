@@ -21,9 +21,10 @@ class KsiazkaAdresowa
     int idZalogowanegoUzytkownika;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami)
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami)
     {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+        adresatMenedzer.wczytajAdresatowZPliku();
     };
     void menuGlowne();
     int menuUzytkownika(int IdZalogowanegoUzytkownika);

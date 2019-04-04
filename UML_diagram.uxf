@@ -27,21 +27,24 @@
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>250</w>
+      <w>330</w>
       <h>310</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 - UzytkownikMenedzer : uzytkownikMenedzer
+- AdresatMenedzer : adresatMenedzer
+- idZalogowanegoUzytkownika : int
+
 --
-KsiazkaAdresowa()
++ KsiazkaAdresowa()
 - rejestracjaUzytkownika() : void
 - wypiszWszystkichUzytkownikow() : void
 - wyswietlMenuGlowne () : void
 - wyswietlMenuUzytkownika () : void
 - logowanieUzytkownika() : int
 + menuGlowne() : void
-+ menuUzytkownika() : void
++ menuUzytkownika() : int
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -61,7 +64,7 @@ KsiazkaAdresowa()
 + AdresatMenedzer()
 + dodawanieAdresata(): void
 + wypiszWszystkichAdresatowUzytkownika() : void
-- wczytajAdresatowZPliku() : void
++ wczytajAdresatowZPliku() : void
 - podajDaneNowegoAdresata() : Uzytkownik
 - pobierzIdNowegoAdresata () : integer</panel_attributes>
     <additional_attributes/>
@@ -80,7 +83,7 @@ KsiazkaAdresowa()
 --
 + PlikZAdresatami()
 + dopiszAdresataDoPliku() : void
-+ wczytajAdresatowZPliku() : vector &lt;Adresat&gt; uzytkownicy
++ wczytajAdresatowZPliku() : vector &lt;Adresat&gt; adresaci
 - czyPlikJestPusty() : bool
 - zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
 - pobierzDaneAdresata : Uzytkownik
