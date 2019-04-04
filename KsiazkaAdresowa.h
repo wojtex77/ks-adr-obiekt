@@ -11,7 +11,7 @@ class KsiazkaAdresowa
 
     UzytkownikMenedzer uzytkownikMenedzer;
 
-    void wyswietlMenuLogowania();
+    void wyswietlMenuGlowne();
     void wyswietlMenuUzytkownika();
     int logowanieUzytkownika();
     void rejestracjaUzytkownika();
@@ -23,7 +23,7 @@ public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
         };
-    int menuLogowania();
+    void menuGlowne();
     int menuUzytkownika(int IdZalogowanegoUzytkownika);
 
 };

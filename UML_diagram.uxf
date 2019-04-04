@@ -33,10 +33,10 @@
 KsiazkaAdresowa()
 - rejestracjaUzytkownika() : void
 - wypiszWszystkichUzytkownikow() : void
-- wyswietlMenuLogowania () : void
+- wyswietlMenuGlowne () : void
 - wyswietlMenuUzytkownika () : void
 - logowanieUzytkownika() : int
-+ menuLogowania() : int
++ menuGlowne() : int
 + menuUzytkownika() : void
 </panel_attributes>
     <additional_attributes/>

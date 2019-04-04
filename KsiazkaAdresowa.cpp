@@ -13,7 +13,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 };
 
-void KsiazkaAdresowa::wyswietlMenuLogowania()
+void KsiazkaAdresowa::wyswietlMenuGlowne()
 {
     system("cls");
     cout << "    >>> MENU  GLOWNE <<<" << endl;
@@ -30,19 +30,20 @@ int KsiazkaAdresowa::logowanieUzytkownika()
     return uzytkownikMenedzer.logowanieUzytkownika();
 };
 
-int KsiazkaAdresowa::menuLogowania()
+void KsiazkaAdresowa::menuGlowne()
 {
     char wybor='0';
     do
     {
-        wyswietlMenuLogowania();
+        wyswietlMenuGlowne();
         cin >>wybor;
         switch (wybor)
         {
         case ('2'):
         {
             cout <<endl<< "LOGOWANIE"<<endl;
-            return logowanieUzytkownika(); //zwraca ID zalogowanego uzytkownika
+            int idUzytkownika=logowanieUzytkownika();
+            if (idUzytkownika!=0) menuUzytkownika(idUzytkownika);
             break;
         }
         case ('1'):
@@ -141,7 +142,7 @@ int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
 
         case ('8'):
         {
-            menuLogowania();
+            menuGlowne();
             break;
         }
         default:
