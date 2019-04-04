@@ -7,7 +7,8 @@
 
 using namespace std;
 
-class MetodyPomocnicze {
+class MetodyPomocnicze
+{
 public:
     static string konwerjsaIntNaString(int liczba);
 };

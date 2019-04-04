@@ -5,7 +5,8 @@
 
 using namespace std;
 
-class Adresat {
+class Adresat
+{
     int idAdresata, idUzytkownika;
     string imie, nazwisko, numerTelefonu, email, adres;
 

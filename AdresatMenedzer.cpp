@@ -46,3 +46,19 @@ int AdresatMenedzer::pobierzIdNowegoAdresata()
     najwyzszeId++;
     return najwyzszeId;
 };
+
+void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika(int idUzytkownika){
+    system("cls");
+    cout << " >>> WSZYSCY ADRESACI  <<<" << endl;
+    cout << "---------------------------" << endl;
+    for (int i=0; i<adresaci.size(); i++){
+        if (adresaci[i].pobierzIdUzytkownika()==idUzytkownika){
+            cout << adresaci[i].pobierzImie() << " " << adresaci[i].pobierzNazwisko()<<endl;
+            cout << "tel: " << adresaci[i].pobierzNumerTelefonu()<<endl;
+            cout << "email: " << adresaci[i].pobierzEmail()<<endl;
+            cout << "adres: " << adresaci[i].pobierzAdres()<<endl;
+            cout << "---------------------------"<<endl;
+
+        }
+    }
+};

@@ -19,7 +19,7 @@ class AdresatMenedzer {
 public:
     //AdresatMenedzer();
     void dodawanieAdresata(int idUzytkownika);
-    void wypiszWszystkichAdresatowUzytkownika();
+    void wypiszWszystkichAdresatowUzytkownika(int idUzytkownika);
 
 
 };

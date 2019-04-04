@@ -1,6 +1,7 @@
 #include "PlikZUzytkownikami.h"
 
-vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku(){
+vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
+{
     Uzytkownik uzytkownik;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
     vector <Uzytkownik> wczytaniUzytkownicy;
@@ -20,7 +21,8 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku(){
     return wczytaniUzytkownicy;
 };
 
-Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami){
+Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
+{
     Uzytkownik uzytkownik;
     string pojedynczaDanaUzytkownika = "";
     int numerPojedynczejDanejUzytkownika = 1;

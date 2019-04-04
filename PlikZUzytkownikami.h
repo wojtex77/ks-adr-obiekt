@@ -9,7 +9,8 @@
 
 using namespace std;
 
-class PlikZUzytkownikami {
+class PlikZUzytkownikami
+{
 
     string nazwaPlikuZUzytkownikami;
     bool czyPlikJestPusty(fstream *plikTekstowy);

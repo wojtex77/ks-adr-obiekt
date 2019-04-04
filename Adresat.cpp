@@ -53,9 +53,11 @@ string Adresat::pobierzAdres ()
     return adres;
 };
 
-int Adresat::pobierzIdAdresata(){
+int Adresat::pobierzIdAdresata()
+{
     return idAdresata;
 };
-int Adresat::pobierzIdUzytkownika(){
+int Adresat::pobierzIdUzytkownika()
+{
     return idUzytkownika;
 };

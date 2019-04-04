@@ -43,7 +43,8 @@ void KsiazkaAdresowa::menuGlowne()
         {
             cout <<endl<< "LOGOWANIE"<<endl;
             int idUzytkownika=logowanieUzytkownika();
-            if (idUzytkownika!=0) menuUzytkownika(idUzytkownika);
+            if (idUzytkownika!=0)
+                menuUzytkownika(idUzytkownika);
             break;
         }
         case ('1'):
@@ -69,7 +70,8 @@ void KsiazkaAdresowa::menuGlowne()
     while (wybor!=9);
 };
 
-    void KsiazkaAdresowa::wyswietlMenuUzytkownika(){
+void KsiazkaAdresowa::wyswietlMenuUzytkownika()
+{
     system("cls");
     cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
     cout << "---------------------------" << endl;
@@ -85,7 +87,7 @@ void KsiazkaAdresowa::menuGlowne()
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
 
-    };
+};
 
 
 int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
@@ -116,8 +118,8 @@ int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
         }
         case ('4'):
         {
-            cout << "W trakcie opracowywania";
-            Sleep(1000);
+            adresatMenedzer.wypiszWszystkichAdresatowUzytkownika(IdZalogowanegoUzytkownika);
+            system("pause");
             break;
         }
         case ('5'):
