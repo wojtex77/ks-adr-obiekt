@@ -36,7 +36,7 @@ KsiazkaAdresowa()
 - wyswietlMenuGlowne () : void
 - wyswietlMenuUzytkownika () : void
 - logowanieUzytkownika() : int
-+ menuGlowne() : int
++ menuGlowne() : void
 + menuUzytkownika() : void
 </panel_attributes>
     <additional_attributes/>
