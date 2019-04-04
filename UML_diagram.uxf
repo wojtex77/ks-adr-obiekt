@@ -4,16 +4,20 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>30</y>
-      <w>130</w>
+      <x>990</x>
+      <y>660</y>
+      <w>180</w>
       <h>210</h>
     </coordinates>
-    <panel_attributes>Uzytkownik
+    <panel_attributes>Adresat
 --
-- id : integer
-- login : string
-- haslo : string
+- idAdresata : integer
+- idUzytkownika : integer
+- imie : string
+- nazwisko : string
+- numerTelefonu : string
+- email : string
+- adres : string
 --
 </panel_attributes>
     <additional_attributes/>
@@ -44,8 +48,67 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
+      <x>900</x>
+      <y>40</y>
+      <w>340</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>AdresatMenedzer
+--
+- adresaci : vector &lt;Adresat&gt;
+- plikZAdresatami : plikZAdresatami
+--
++ AdresatMenedzer()
++ dodawanieAdresata(): void
++ wypiszWszystkichAdresatowUzytkownika() : void
+- wczytajAdresatowZPliku() : void
+- podajDaneNowegoAdresata() : Uzytkownik
+- pobierzIdNowegoAdresata () : integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>370</y>
+      <w>510</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>PlikZAdresatami
+--
+- nazwaPlikuZAdresatami : String
+--
++ PlikZAdresatami()
++ dopiszAdresataDoPliku() : void
++ wczytajAdresatowZPliku() : vector &lt;Adresat&gt; uzytkownicy
+- czyPlikJestPusty() : bool
+- zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
+- pobierzDaneAdresata : Uzytkownik
++ zapiszWszystkichAdresatowDoPliku() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
       <x>30</x>
-      <y>340</y>
+      <y>850</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>MetodyPomocnicze
+--
+
+
+--
++ konwerjsaIntNaString() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>330</y>
       <w>550</w>
       <h>280</h>
     </coordinates>
@@ -69,8 +132,8 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>630</y>
+      <x>50</x>
+      <y>650</y>
       <w>550</w>
       <h>190</h>
     </coordinates>
@@ -91,17 +154,18 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>850</y>
-      <w>270</w>
-      <h>120</h>
+      <x>350</x>
+      <y>50</y>
+      <w>130</w>
+      <h>210</h>
     </coordinates>
-    <panel_attributes>MetodyPomocnicze
+    <panel_attributes>Uzytkownik
 --
-
-
+- id : integer
+- login : string
+- haslo : string
 --
-+ konwerjsaIntNaString() : string</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

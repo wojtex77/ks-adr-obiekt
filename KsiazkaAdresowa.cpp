@@ -99,8 +99,7 @@ int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
         {
         case ('1'):
         {
-            cout << "W trakcie opracowywania";
-            Sleep(1000);
+            adresatMenedzer.dodawanieAdresata(IdZalogowanegoUzytkownika);
             break;
         }
         case ('2'):
