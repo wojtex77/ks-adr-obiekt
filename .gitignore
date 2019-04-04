@@ -39,4 +39,4 @@ obj/
 ks-adr-obiekt.*
 
 # User files
-Uzytkownicy.txt
+*.txt
