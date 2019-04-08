@@ -15,14 +15,15 @@ class AdresatMenedzer {
     PlikZAdresatami plikZAdresatami;
     Adresat podajDaneNowegoAdresata();
     int pobierzIdNowegoAdresata();
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {
-    adresaci=plikZAdresatami.wczytajAdresatowZPliku();
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika){
+    adresaci=plikZAdresatami.wczytajAdresatowZPliku(idZalogowanegoUzytkownika);
     };
-    void dodawanieAdresata(int idUzytkownika);
-    void wypiszWszystkichAdresatowUzytkownika(int idUzytkownika);
-    void wczytajAdresatowZPliku();
+    void dodawanieAdresata();//(int idUzytkownika);
+    void wypiszWszystkichAdresatowUzytkownika();//(int idUzytkownika);
+    void wczytajAdresatowZPliku();//(int idUzytkownika);
 
 
 };

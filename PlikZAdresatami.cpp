@@ -1,6 +1,6 @@
 #include "PlikZAdresatami.h"
 
-vector <Adresat> PlikZAdresatami::wczytajAdresatowZPliku()
+vector <Adresat> PlikZAdresatami::wczytajAdresatowZPliku(int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
@@ -14,7 +14,10 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZPliku()
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
         {
             adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
-            wczytaniAdresaci.push_back(adresat);
+            if (adresat.pobierzIdUzytkownika()==idZalogowanegoUzytkownika){
+                wczytaniAdresaci.push_back(adresat);
+            }
+            idOstatniegoAdresata=adresat.pobierzIdAdresata();
         }
         plikTekstowy.close();
     }
@@ -91,6 +94,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         if (czyPlikJestPusty(&plikTekstowy) == true)
         {
             plikTekstowy << liniaZDanymiAdresata;
+            idOstatniegoAdresata=adresat.pobierzIdAdresata();
         }
         else
         {

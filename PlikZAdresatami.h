@@ -12,7 +12,8 @@ using namespace std;
 class PlikZAdresatami
 {
 
-    string NAZWA_PLIKU_Z_ADRESATAMI;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    int idOstatniegoAdresata;
     bool czyPlikJestPusty(fstream *plikTekstowy);
     string zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
@@ -20,7 +21,7 @@ class PlikZAdresatami
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {};
     void dopiszAdresataDoPliku(Adresat adresat);
-    vector <Adresat> wczytajAdresatowZPliku();
+    vector <Adresat> wczytajAdresatowZPliku(int idZalogowanegoUzytkownika);
     void zapiszWszystkichAdresatowDoPliku(vector <Adresat> Adresaci);
 
 };

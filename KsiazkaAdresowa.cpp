@@ -44,7 +44,7 @@ void KsiazkaAdresowa::menuGlowne()
             cout <<endl<< "LOGOWANIE"<<endl;
             logowanieUzytkownika();
             if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika()!=0)
-                menuUzytkownika(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+                menuUzytkownika();//(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
             break;
         }
         case ('1'):
@@ -90,8 +90,10 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
 };
 
 
-int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
+int KsiazkaAdresowa::menuUzytkownika()//(int IdZalogowanegoUzytkownika)
 {
+//    adresatMenedzer.ustawIdZalogowanegoUzytkownika(IdZalogowanegoUzytkownika);
+    adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
     char wybor='0';
     do
     {
@@ -101,7 +103,7 @@ int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
         {
         case ('1'):
         {
-            adresatMenedzer.dodawanieAdresata(IdZalogowanegoUzytkownika);
+            adresatMenedzer->dodawanieAdresata();//(IdZalogowanegoUzytkownika);
             break;
         }
         case ('2'):
@@ -118,7 +120,7 @@ int KsiazkaAdresowa::menuUzytkownika(int IdZalogowanegoUzytkownika)
         }
         case ('4'):
         {
-            adresatMenedzer.wypiszWszystkichAdresatowUzytkownika(IdZalogowanegoUzytkownika);
+            adresatMenedzer->wypiszWszystkichAdresatowUzytkownika();//(IdZalogowanegoUzytkownika);
             system("pause");
             break;
         }

@@ -1,13 +1,13 @@
 #include "AdresatMenedzer.h"
 
 
-void AdresatMenedzer::dodawanieAdresata(int idUzytkownika)
+void AdresatMenedzer::dodawanieAdresata()//(int idUzytkownika)
 {
     Adresat adresat;
     system("cls");
     string temp;
 
-    adresat.UstawIdUzytkownika(idUzytkownika);
+    adresat.UstawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     adresat.UstawIdAdresata(pobierzIdNowegoAdresata());
     cout << " >>> PODAJ DANE ADREATA <<<" << endl;
     cout << "---------------------------" << endl;
@@ -51,12 +51,12 @@ int AdresatMenedzer::pobierzIdNowegoAdresata()
     return najwyzszeId;
 };
 
-void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika(int idUzytkownika){
+void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika(){//(int idUzytkownika){
     system("cls");
     cout << " >>> WSZYSCY ADRESACI  <<<" << endl;
     cout << "---------------------------" << endl;
     for (int i=0; i<adresaci.size(); i++){
-        if (adresaci[i].pobierzIdUzytkownika()==idUzytkownika){
+        if (adresaci[i].pobierzIdUzytkownika()==ID_ZALOGOWANEGO_UZYTKOWNIKA){
             cout << adresaci[i].pobierzImie() << " " << adresaci[i].pobierzNazwisko()<<endl;
             cout << "tel: " << adresaci[i].pobierzNumerTelefonu()<<endl;
             cout << "email: " << adresaci[i].pobierzEmail()<<endl;
