@@ -124,7 +124,6 @@
 + UzytkownikMenedzer()
 + rejestracjaUzytkownika(): void
 + wypiszWszystkichUzytkownikow() : void
-+ wczytajUzytkownikowZPliku() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika () : integer
 - czyIstniejeLogin() : bool
@@ -142,7 +141,7 @@
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
-- nazwaPlikuZUzytkownikami : String
+- NAZWA_PLIKU_Z_UZYTKOWNIKAMI : String
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku() : void

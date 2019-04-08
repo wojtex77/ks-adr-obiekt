@@ -17,7 +17,9 @@ class AdresatMenedzer {
     int pobierzIdNowegoAdresata();
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {
+    adresaci=plikZAdresatami.wczytajAdresatowZPliku();
+    };
     void dodawanieAdresata(int idUzytkownika);
     void wypiszWszystkichAdresatowUzytkownika(int idUzytkownika);
     void wczytajAdresatowZPliku();

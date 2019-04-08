@@ -7,7 +7,7 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZPliku()
     vector <Adresat> wczytaniAdresaci;
 
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -82,7 +82,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
     fstream plikTekstowy;
     string liniaZDanymiAdresata = "";
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::app);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::app);
 
     if (plikTekstowy.good() == true)
     {
@@ -99,7 +99,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         plikTekstowy.close();
     }
     else
-        cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZAdresatami<< " i zapisac w nim danych." << endl;
+        cout << "Nie udalo sie otworzyc pliku " << NAZWA_PLIKU_Z_ADRESATAMI<< " i zapisac w nim danych." << endl;
 }
 
 
@@ -126,7 +126,7 @@ void PlikZAdresatami::zapiszWszystkichAdresatowDoPliku(vector <Adresat> adresaci
     string liniaZDanymiAdresata = "";
     vector <Adresat>::iterator itrKoniec = --adresaci.end();
 
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out);
 
     if (plikTekstowy.good() == true)
     {
@@ -148,6 +148,6 @@ void PlikZAdresatami::zapiszWszystkichAdresatowDoPliku(vector <Adresat> adresaci
     }
     else
     {
-        cout << "Nie mozna otworzyc pliku " << nazwaPlikuZAdresatami << endl;
+        cout << "Nie mozna otworzyc pliku " << NAZWA_PLIKU_Z_ADRESATAMI << endl;
     }
 };

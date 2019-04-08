@@ -1,9 +1,5 @@
 #include "AdresatMenedzer.h"
 
-void AdresatMenedzer::wczytajAdresatowZPliku()
-{
-    adresaci=plikZAdresatami.wczytajAdresatowZPliku();
-};
 
 void AdresatMenedzer::dodawanieAdresata(int idUzytkownika)
 {
