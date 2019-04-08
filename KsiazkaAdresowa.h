@@ -4,6 +4,7 @@
 #include <windows.h>
 #include "UzytkownikMenedzer.h"
 #include "AdresatMenedzer.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
@@ -19,17 +20,19 @@ class KsiazkaAdresowa
     void logowanieUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void wylogujUzytkownika();
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESAMI(nazwaPlikuZAdresatami) {
         adresatMenedzer = NULL;
+        menuGlowne();
     };
     ~KsiazkaAdresowa(){
         delete adresatMenedzer;
         adresatMenedzer = NULL;
     };
     void menuGlowne();
-    int menuUzytkownika();//(int IdZalogowanegoUzytkownika);
+    void menuUzytkownika();
 
 };
 

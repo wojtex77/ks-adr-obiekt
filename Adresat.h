@@ -11,7 +11,9 @@ class Adresat
     string imie, nazwisko, numerTelefonu, email, adres;
 
 public:
-    //Adresat();
+    Adresat(int idAdresata, int idUzytkownika, string imie,string nazwisko,
+            string numerTelefonu, string email, string adres);
+    Adresat();
 
     void UstawIdAdresata(int liczba);
     void UstawIdUzytkownika(int liczba);

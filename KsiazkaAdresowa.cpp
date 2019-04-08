@@ -36,7 +36,7 @@ void KsiazkaAdresowa::menuGlowne()
     do
     {
         wyswietlMenuGlowne();
-        cin >>wybor;
+        wybor=MetodyPomocnicze::wczytajZnak();
         switch (wybor)
         {
         case ('2'):
@@ -44,7 +44,7 @@ void KsiazkaAdresowa::menuGlowne()
             cout <<endl<< "LOGOWANIE"<<endl;
             logowanieUzytkownika();
             if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika()!=0)
-                menuUzytkownika();//(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+                menuUzytkownika();
             break;
         }
         case ('1'):
@@ -90,20 +90,19 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
 };
 
 
-int KsiazkaAdresowa::menuUzytkownika()//(int IdZalogowanegoUzytkownika)
+void KsiazkaAdresowa::menuUzytkownika()
 {
-//    adresatMenedzer.ustawIdZalogowanegoUzytkownika(IdZalogowanegoUzytkownika);
     adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
     char wybor='0';
     do
     {
         wyswietlMenuUzytkownika();
-        cin >>wybor;
+        wybor=MetodyPomocnicze::wczytajZnak();
         switch (wybor)
         {
         case ('1'):
         {
-            adresatMenedzer->dodawanieAdresata();//(IdZalogowanegoUzytkownika);
+            adresatMenedzer->dodawanieAdresata();
             break;
         }
         case ('2'):
@@ -120,7 +119,7 @@ int KsiazkaAdresowa::menuUzytkownika()//(int IdZalogowanegoUzytkownika)
         }
         case ('4'):
         {
-            adresatMenedzer->wypiszWszystkichAdresatowUzytkownika();//(IdZalogowanegoUzytkownika);
+            adresatMenedzer->wypiszWszystkichAdresatowUzytkownika();
             system("pause");
             break;
         }
@@ -145,6 +144,7 @@ int KsiazkaAdresowa::menuUzytkownika()//(int IdZalogowanegoUzytkownika)
 
         case ('8'):
         {
+            wylogujUzytkownika();
             menuGlowne();
             break;
         }
@@ -153,7 +153,13 @@ int KsiazkaAdresowa::menuUzytkownika()//(int IdZalogowanegoUzytkownika)
             Sleep(1500);
             break;
         }
-
     }
     while (wybor!=8);
+};
+
+
+void KsiazkaAdresowa::wylogujUzytkownika(){
+    uzytkownikMenedzer.wylogujUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
 };

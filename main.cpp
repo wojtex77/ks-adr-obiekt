@@ -7,6 +7,6 @@ using namespace std;
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa ("Uzytkownicy.txt","Adresaci.txt");
-    ksiazkaAdresowa.menuGlowne();
+    //ksiazkaAdresowa.menuGlowne();
     return 0;
 }

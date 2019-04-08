@@ -1,5 +1,17 @@
 #include "Adresat.h"
 
+Adresat::Adresat(int idAdresata, int idUzytkownika, string imie,string nazwisko,
+            string numerTelefonu, string email, string adres){
+    this->idAdresata=idAdresata;
+    this->idUzytkownika=idUzytkownika;
+    this->imie=imie;
+    this->nazwisko=nazwisko;
+    this->numerTelefonu=numerTelefonu;
+    this->email=email;
+    this->adres=adres;
+};
+
+Adresat::Adresat(){};
 
 void Adresat::UstawIdAdresata(int liczba)
 {

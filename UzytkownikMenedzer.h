@@ -26,12 +26,14 @@ public:
 
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {
         uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPliku();
+        idZalogowanegoUzytkownika=0;
         };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     int pobierzIdZalogowanegoUzytkownika ();
+    void wylogujUzytkownika();
 
 
 };

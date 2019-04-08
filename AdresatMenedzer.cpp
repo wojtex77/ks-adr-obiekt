@@ -1,32 +1,26 @@
 #include "AdresatMenedzer.h"
 
 
-void AdresatMenedzer::dodawanieAdresata()//(int idUzytkownika)
+void AdresatMenedzer::dodawanieAdresata()
 {
     Adresat adresat;
     system("cls");
-    string temp;
 
     adresat.UstawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
-    adresat.UstawIdAdresata(pobierzIdNowegoAdresata());
+    adresat.UstawIdAdresata(pobierzIdNowegoAdresata()+1);
     cout << " >>> PODAJ DANE ADREATA <<<" << endl;
     cout << "---------------------------" << endl;
 
     cout << "Podaj imie: ";
-    cin >> temp;
-    adresat.UstawImie(temp);
+    adresat.UstawImie(MetodyPomocnicze::wczytajLinie());
     cout << "Podaj nazwisko: ";
-    cin >> temp;
-    adresat.UstawNazwisko(temp);
+    adresat.UstawNazwisko(MetodyPomocnicze::wczytajLinie());
     cout << "Podaj numer telefonu: ";
-    cin >> temp;
-    adresat.UstawNumerTelefonu(temp);
+    adresat.UstawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
     cout << "Podaj email: ";
-    cin >> temp;
-    adresat.UstawEmail(temp);
+    adresat.UstawEmail(MetodyPomocnicze::wczytajLinie());
     cout << "Podaj adres: ";
-    cin >> temp;
-    adresat.UstawAdres(temp);
+    adresat.UstawAdres(MetodyPomocnicze::wczytajLinie());
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
     cout << endl << "Adresat dodany pomyslnie" << endl << endl;
@@ -35,28 +29,18 @@ void AdresatMenedzer::dodawanieAdresata()//(int idUzytkownika)
 
 int AdresatMenedzer::pobierzIdNowegoAdresata()
 {
-    int najwyzszeId=1;
-    if (adresaci.empty())
-        return najwyzszeId;
-    else
-    {
-        for (int i=0; i<adresaci.size(); i++)
-        {
-            int temp=adresaci[i].pobierzIdAdresata();
-            if (temp>najwyzszeId)
-                najwyzszeId=temp;
-        }
-    }
-    najwyzszeId++;
-    return najwyzszeId;
+    return plikZAdresatami.pobierzIdOstatniegoAdresata();
 };
 
-void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika(){//(int idUzytkownika){
+void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika()
+{
     system("cls");
     cout << " >>> WSZYSCY ADRESACI  <<<" << endl;
     cout << "---------------------------" << endl;
-    for (int i=0; i<adresaci.size(); i++){
-        if (adresaci[i].pobierzIdUzytkownika()==ID_ZALOGOWANEGO_UZYTKOWNIKA){
+    for (int i=0; i<adresaci.size(); i++)
+    {
+        if (adresaci[i].pobierzIdUzytkownika()==ID_ZALOGOWANEGO_UZYTKOWNIKA)
+        {
             cout << adresaci[i].pobierzImie() << " " << adresaci[i].pobierzNazwisko()<<endl;
             cout << "tel: " << adresaci[i].pobierzNumerTelefonu()<<endl;
             cout << "email: " << adresaci[i].pobierzEmail()<<endl;

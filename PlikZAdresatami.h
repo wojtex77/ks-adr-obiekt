@@ -23,7 +23,7 @@ public:
     void dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZPliku(int idZalogowanegoUzytkownika);
     void zapiszWszystkichAdresatowDoPliku(vector <Adresat> Adresaci);
-
+    int pobierzIdOstatniegoAdresata();
 };
 
 #endif

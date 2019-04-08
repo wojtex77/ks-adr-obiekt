@@ -19,11 +19,10 @@ class AdresatMenedzer {
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika){
-    adresaci=plikZAdresatami.wczytajAdresatowZPliku(idZalogowanegoUzytkownika);
+    adresaci=plikZAdresatami.wczytajAdresatowZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
-    void dodawanieAdresata();//(int idUzytkownika);
-    void wypiszWszystkichAdresatowUzytkownika();//(int idUzytkownika);
-    void wczytajAdresatowZPliku();//(int idUzytkownika);
+    void dodawanieAdresata();
+    void wypiszWszystkichAdresatowUzytkownika();
 
 
 };
