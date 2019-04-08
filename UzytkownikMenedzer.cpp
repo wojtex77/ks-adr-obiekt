@@ -1,9 +1,6 @@
 #include "UzytkownikMenedzer.h"
 
-/*void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
-{
 
-};*/
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
@@ -128,3 +125,6 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 
 };
 
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika (){
+    return idZalogowanegoUzytkownika;
+};

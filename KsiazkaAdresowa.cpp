@@ -25,9 +25,9 @@ void KsiazkaAdresowa::wyswietlMenuGlowne()
     cout << "Twoj wybor: ";
 };
 
-int KsiazkaAdresowa::logowanieUzytkownika()
+void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    return uzytkownikMenedzer.logowanieUzytkownika();
+    uzytkownikMenedzer.logowanieUzytkownika();
 };
 
 void KsiazkaAdresowa::menuGlowne()
@@ -42,9 +42,9 @@ void KsiazkaAdresowa::menuGlowne()
         case ('2'):
         {
             cout <<endl<< "LOGOWANIE"<<endl;
-            int idUzytkownika=logowanieUzytkownika();
-            if (idUzytkownika!=0)
-                menuUzytkownika(idUzytkownika);
+            logowanieUzytkownika();
+            if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika()!=0)
+                menuUzytkownika(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
             break;
         }
         case ('1'):

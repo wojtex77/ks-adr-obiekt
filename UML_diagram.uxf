@@ -34,8 +34,6 @@
 --
 - UzytkownikMenedzer : uzytkownikMenedzer
 - AdresatMenedzer : adresatMenedzer
-- idZalogowanegoUzytkownika : int
-
 --
 + KsiazkaAdresowa()
 - rejestracjaUzytkownika() : void

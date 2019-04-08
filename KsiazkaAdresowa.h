@@ -15,10 +15,10 @@ class KsiazkaAdresowa
 
     void wyswietlMenuGlowne();
     void wyswietlMenuUzytkownika();
-    int logowanieUzytkownika();
+    void logowanieUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    int idZalogowanegoUzytkownika;
+   // int idZalogowanegoUzytkownika;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami) {};
