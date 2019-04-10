@@ -1,5 +1,5 @@
-#ifndef ADRESATMENEDZER.H
-#define ADRESATMENEDZER.H
+#ifndef ADRESATMENEDZER_H
+#define ADRESATMENEDZER_H
 
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
