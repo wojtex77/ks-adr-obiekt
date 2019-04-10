@@ -5,13 +5,13 @@ void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();
 
-};
+}
 
 void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 
-};
+}
 
 void KsiazkaAdresowa::wyswietlMenuGlowne()
 {
@@ -23,12 +23,12 @@ void KsiazkaAdresowa::wyswietlMenuGlowne()
     cout << "9. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-};
+}
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenedzer.logowanieUzytkownika();
-};
+}
 
 void KsiazkaAdresowa::menuGlowne()
 {
@@ -68,7 +68,7 @@ void KsiazkaAdresowa::menuGlowne()
 
     }
     while (wybor!=9);
-};
+}
 
 void KsiazkaAdresowa::wyswietlMenuUzytkownika()
 {
@@ -87,7 +87,7 @@ void KsiazkaAdresowa::wyswietlMenuUzytkownika()
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
 
-};
+}
 
 
 void KsiazkaAdresowa::menuUzytkownika()
@@ -155,11 +155,11 @@ void KsiazkaAdresowa::menuUzytkownika()
         }
     }
     while (wybor!=8);
-};
+}
 
 
 void KsiazkaAdresowa::wylogujUzytkownika(){
     uzytkownikMenedzer.wylogujUzytkownika();
     delete adresatMenedzer;
     adresatMenedzer = NULL;
-};
+}

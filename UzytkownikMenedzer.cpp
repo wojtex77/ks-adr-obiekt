@@ -10,7 +10,7 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
-};
+}
 
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
@@ -32,14 +32,14 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
     uzytkownik.ustawHaslo(haslo);
 
     return uzytkownik;
-};
+}
 int UzytkownikMenedzer::pobierzIdNowegoUzytkownika()
 {
     if (uzytkownicy.empty()==true)
         return 1;
     else
         return uzytkownicy.back().pobierzId()+1;
-};
+}
 
 bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 {
@@ -54,7 +54,7 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
         }
     }
     return false;
-};
+}
 
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
@@ -65,7 +65,7 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
         cout << uzytkownicy[i].pobierzLogin() << " | ";
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
-};
+}
 
 int UzytkownikMenedzer::logowanieUzytkownika()
 {
@@ -123,12 +123,12 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 
-};
+}
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika (){
     return idZalogowanegoUzytkownika;
-};
+}
 
 void UzytkownikMenedzer::wylogujUzytkownika(){
     idZalogowanegoUzytkownika=0;
-};
+}

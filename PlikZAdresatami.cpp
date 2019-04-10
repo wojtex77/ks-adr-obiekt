@@ -22,7 +22,7 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZPliku(int idZalogowanegoUzytk
         plikTekstowy.close();
     }
     return wczytaniAdresaci;
-};
+}
 
 Adresat PlikZAdresatami::pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {
@@ -67,7 +67,7 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneJednegoAdresataOddzielon
         }
     }
     return adresat;
-};
+}
 
 
 
@@ -154,9 +154,9 @@ void PlikZAdresatami::zapiszWszystkichAdresatowDoPliku(vector <Adresat> adresaci
     {
         cout << "Nie mozna otworzyc pliku " << NAZWA_PLIKU_Z_ADRESATAMI << endl;
     }
-};
+}
 
 
 int PlikZAdresatami::pobierzIdOstatniegoAdresata(){
     return idOstatniegoAdresata;
-};
+}

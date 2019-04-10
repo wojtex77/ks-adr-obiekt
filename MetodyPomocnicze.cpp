@@ -13,7 +13,7 @@ string MetodyPomocnicze::wczytajLinie(){
     string linia;
     getline(cin, linia);
     return linia;
-};
+}
 
 char MetodyPomocnicze::wczytajZnak(){
     cin.sync();
@@ -29,4 +29,4 @@ char MetodyPomocnicze::wczytajZnak(){
         cout << "To nie jest pojedynczy znak "<<endl;
     }
     return znak;
-};
+}

@@ -25,12 +25,12 @@ void AdresatMenedzer::dodawanieAdresata()
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
     cout << endl << "Adresat dodany pomyslnie" << endl << endl;
     system("pause");
-};
+}
 
 int AdresatMenedzer::pobierzIdNowegoAdresata()
 {
     return plikZAdresatami.pobierzIdOstatniegoAdresata();
-};
+}
 
 void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika()
 {
@@ -49,4 +49,4 @@ void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika()
 
         }
     }
-};
+}
