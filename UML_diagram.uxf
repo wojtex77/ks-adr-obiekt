@@ -19,6 +19,7 @@
 - email : string
 - adres : string
 --
++ Adresat()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -34,13 +35,16 @@
 --
 - UzytkownikMenedzer : uzytkownikMenedzer
 - AdresatMenedzer : adresatMenedzer
+- NAZWA_PLIKU_Z_ADRESAMI : string
 --
 + KsiazkaAdresowa()
+~ KsiazkaAdresowa()
 - rejestracjaUzytkownika() : void
 - wypiszWszystkichUzytkownikow() : void
 - wyswietlMenuGlowne () : void
 - wyswietlMenuUzytkownika () : void
-- logowanieUzytkownika() : int
+- logowanieUzytkownika() : void
+- wylogujUzytkownika() : void
 + menuGlowne() : void
 + menuUzytkownika() : int
 </panel_attributes>
@@ -58,13 +62,13 @@
 --
 - adresaci : vector &lt;Adresat&gt;
 - plikZAdresatami : plikZAdresatami
+- ID_ZALOGOWANEGO_UZYTKOWNIKA : int
 --
 + AdresatMenedzer()
 + dodawanieAdresata(): void
 + wypiszWszystkichAdresatowUzytkownika() : void
-+ wczytajAdresatowZPliku() : void
-- podajDaneNowegoAdresata() : Uzytkownik
-- pobierzIdNowegoAdresata () : integer</panel_attributes>
+- podajDaneNowegoAdresata() : Adresat
+- pobierzIdNowegoAdresata () : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -77,7 +81,8 @@
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
-- nazwaPlikuZAdresatami : String
+- NAZWA_PLIKU_Z_ADRESATAMI : String
+- idOstatniegoAdresata : int
 --
 + PlikZAdresatami()
 + dopiszAdresataDoPliku() : void
@@ -86,7 +91,7 @@
 - zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
 - pobierzDaneAdresata : Uzytkownik
 + zapiszWszystkichAdresatowDoPliku() : void
-</panel_attributes>
++ pobierzIdOstatniegoAdresata() : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -102,7 +107,9 @@
 
 
 --
-+ konwerjsaIntNaString() : string</panel_attributes>
++ konwerjsaIntNaString() : string
++ wczytajLinie() : string
++ wczytajZnak() : char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -125,8 +132,10 @@
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika () : integer
 - czyIstniejeLogin() : bool
-+ logowanieUzytkownika() : int
-+ zmianaHaslaZalogowanegoUzytkownika() : void</panel_attributes>
++ logowanieUzytkownika() : void
++ zmianaHaslaZalogowanegoUzytkownika() : void
++ pobierzIdZalogowanegoUzytkownika() : int
++ wylogujUzytkownika() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
