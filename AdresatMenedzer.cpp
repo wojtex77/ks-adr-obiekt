@@ -41,7 +41,7 @@ void AdresatMenedzer::wypiszWszystkichAdresatowUzytkownika()
     {
         if (adresaci[i].pobierzIdUzytkownika()==ID_ZALOGOWANEGO_UZYTKOWNIKA)
         {
-            cout << adresaci[i].pobierzImie() << " " << adresaci[i].pobierzNazwisko()<<endl;
+            cout << adresaci[i].pobierzIdAdresata() <<". "<< adresaci[i].pobierzImie() << " " << adresaci[i].pobierzNazwisko()<<endl;
             cout << "tel: " << adresaci[i].pobierzNumerTelefonu()<<endl;
             cout << "email: " << adresaci[i].pobierzEmail()<<endl;
             cout << "adres: " << adresaci[i].pobierzAdres()<<endl;

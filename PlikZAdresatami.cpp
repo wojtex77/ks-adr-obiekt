@@ -164,8 +164,6 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata(){
 
 void PlikZAdresatami::usunWybranegoAdresata(int idUsuwanegoAdresata){
 
-    Adresat temp;
-
     int numerUsuwanejLinii=0;
 
 
@@ -194,7 +192,6 @@ void PlikZAdresatami::usunWybranegoAdresata(int idUsuwanegoAdresata){
             numerUsuwanejLinii=0;
         }
     }
-    numerUsuwanejLinii=0;
 
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
     string wczytanaLinia = "";
