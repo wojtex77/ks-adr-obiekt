@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 
@@ -14,6 +15,7 @@ class PlikZAdresatami
 
     const string NAZWA_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
+
     bool czyPlikJestPusty(fstream *plikTekstowy);
     string zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
