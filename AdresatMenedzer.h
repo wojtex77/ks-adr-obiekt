@@ -16,6 +16,8 @@ class AdresatMenedzer
     PlikZAdresatami plikZAdresatami;
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
 
+    int podajIdWybranegoAdresata();
+
     Adresat podajDaneNowegoAdresata();
     int pobierzIdNowegoAdresata();
 
@@ -25,6 +27,7 @@ public:
         adresaci=plikZAdresatami.wczytajAdresatowZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
     void dodawanieAdresata();
+    int usunAdresata();
     void wypiszWszystkichAdresatowUzytkownika();
 
 
