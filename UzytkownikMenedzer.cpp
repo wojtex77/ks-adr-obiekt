@@ -73,20 +73,21 @@ void UzytkownikMenedzer::logowanieUzytkownika()
     string login = "", haslo = "";
     bool czyPoprawneHaslo=false;
     bool czyIstniejeLogin=false;
+    bool czyWykorzystanoLimit=false;
     idZalogowanegoUzytkownika=0;
 
     cout << "Podaj login: ";
     cin >> login;
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
-    while ((itr != uzytkownicy.end())&&(czyPoprawneHaslo==false))
+    while ((itr != uzytkownicy.end())&&(czyPoprawneHaslo==false)&&(czyWykorzystanoLimit==false))
     {
         if (itr -> pobierzLogin()== login)
         {
             czyIstniejeLogin=true;
-            if (czyIstniejeLogin==true)
+            for (int iloscProb=3; iloscProb>0; iloscProb--)
             {
-                cout << "Podaj haslo: ";
+                cout << "Podaj haslo (pozostalo prob: "<< iloscProb <<"): ";
                 cin >> haslo;
                 if (itr -> pobierzHaslo() == haslo)
                 {
@@ -94,17 +95,25 @@ void UzytkownikMenedzer::logowanieUzytkownika()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika=itr -> pobierzId();
+                    iloscProb=0;
                 }
+                if ((iloscProb==1)&&(czyPoprawneHaslo==false))
+                    czyWykorzystanoLimit=true;
             }
         }
-            else
-                itr++;
+        else
+            itr++;
     }
-         if (czyIstniejeLogin==false)
-        {
-            cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
-            system("pause");
-        }
+    if (czyIstniejeLogin==false)
+    {
+        cout << "Nie ma uzytkownika z takim loginem!" << endl << endl;
+        system("pause");
+    }
+    if (czyWykorzystanoLimit==true)
+    {
+        cout << "Wyczerpano limit prob!" << endl << endl;
+        system("pause");
+    }
 }
 
 /*{
