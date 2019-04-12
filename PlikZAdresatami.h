@@ -14,7 +14,15 @@ class PlikZAdresatami
 {
 
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    string nazwaTymczasowegoPlikuZAdresatami="temp.txt";
     int idOstatniegoAdresata;
+
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
+    void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
+    string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+
 
     bool czyPlikJestPusty(fstream *plikTekstowy);
     string zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
@@ -26,6 +34,7 @@ public:
     vector <Adresat> wczytajAdresatowZPliku(int idZalogowanegoUzytkownika);
     void zapiszWszystkichAdresatowDoPliku(vector <Adresat> Adresaci);
     int pobierzIdOstatniegoAdresata();
+    void usunWybranegoAdresata(int idUsuwanegoAdresata);
 };
 
 #endif

@@ -77,7 +77,7 @@
       <x>980</x>
       <y>370</y>
       <w>510</w>
-      <h>190</h>
+      <h>270</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
@@ -91,7 +91,8 @@
 - zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami() : string 
 - pobierzDaneAdresata : Uzytkownik
 + zapiszWszystkichAdresatowDoPliku() : void
-+ pobierzIdOstatniegoAdresata() : int</panel_attributes>
++ pobierzIdOstatniegoAdresata() : int
++ usunWybranegoAdresata() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
