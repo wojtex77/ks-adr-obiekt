@@ -67,42 +67,82 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
     }
 }
 
-int UzytkownikMenedzer::logowanieUzytkownika()
+void UzytkownikMenedzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
+    bool czyPoprawneHaslo=false;
+    bool czyIstniejeLogin=false;
+    bool czyWykorzystanoLimit=false;
+    idZalogowanegoUzytkownika=0;
 
     cout << "Podaj login: ";
     cin >> login;
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
-    while (itr != uzytkownicy.end())
+    while ((itr != uzytkownicy.end())&&(czyPoprawneHaslo==false)&&(czyWykorzystanoLimit==false))
     {
         if (itr -> pobierzLogin()== login)
         {
-            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
+            czyIstniejeLogin=true;
+            for (int iloscProb=3; iloscProb>0; iloscProb--)
             {
-                cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                cout << "Podaj haslo (pozostalo prob: "<< iloscProb <<"): ";
                 cin >> haslo;
-
                 if (itr -> pobierzHaslo() == haslo)
                 {
+                    czyPoprawneHaslo=true;
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika=itr -> pobierzId();
-                    return itr -> pobierzId();
+                    iloscProb=0;
                 }
+                if ((iloscProb==1)&&(czyPoprawneHaslo==false))
+                    czyWykorzystanoLimit=true;
             }
-            cout << "Wprowadzono 3 razy bledne haslo." << endl;
-            system("pause");
-            return 0;
         }
-        itr++;
+        else
+            itr++;
     }
-    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
-    system("pause");
-    return 0;
+    if (czyIstniejeLogin==false)
+    {
+        cout << "Nie ma uzytkownika z takim loginem!" << endl << endl;
+        system("pause");
+    }
+    if (czyWykorzystanoLimit==true)
+    {
+        cout << "Wyczerpano limit prob!" << endl << endl;
+        system("pause");
+    }
 }
+
+/*{
+    if (itr -> pobierzLogin()== login)
+    {
+                for (int iloscProb = 3; iloscProb > 0; iloscProb--)
+                {
+                    cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                    cin >> haslo;
+
+                    if (itr -> pobierzHaslo() == haslo)
+                    {
+                        cout << endl << "Zalogowales sie." << endl << endl;
+                        system("pause");
+                        idZalogowanegoUzytkownika=itr -> pobierzId();
+                        //return itr -> pobierzId();
+                    }
+                }
+                cout << "Wprowadzono 3 razy bledne haslo." << endl;
+                system("pause");
+                //return 0;
+            }
+            itr++;
+        }
+        cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+        system("pause");
+        //return 0;*/
+
+
 
 
 
