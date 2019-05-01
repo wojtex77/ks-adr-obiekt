@@ -27,6 +27,9 @@ class PlikZAdresatami
     bool czyPlikJestPusty(fstream *plikTekstowy);
     string zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+
+
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {idOstatniegoAdresata=0;};
@@ -35,6 +38,8 @@ public:
     void zapiszWszystkichAdresatowDoPliku(vector <Adresat> Adresaci);
     int pobierzIdOstatniegoAdresata();
     void usunWybranegoAdresata(int idUsuwanegoAdresata);
+    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
+
 };
 
 #endif

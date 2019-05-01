@@ -131,7 +131,7 @@ void KsiazkaAdresowa::menuUzytkownika()
         }
         case ('6'):
         {
-            cout << "W trakcie opracowywania";
+            adresatMenedzer->edytujAdresata();
             Sleep(1000);
             break;
         }
