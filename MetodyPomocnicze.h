@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 #include <string>
 
@@ -17,6 +18,8 @@ public:
     static char wczytajZnak();
     static int konwersjaStringNaInt(string liczba);
     static int wczytajLiczbeCalkowita();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+
 };
 
 #endif
