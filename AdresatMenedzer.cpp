@@ -127,29 +127,29 @@ int AdresatMenedzer::edytujAdresata (){
             {
             case '1':
                 cout << "Podaj nowe imie: ";
-                itr -> pobierzImie() = MetodyPomocnicze::wczytajLinie();
+                itr -> UstawImie(MetodyPomocnicze::wczytajLinie());
                 itr -> UstawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzImie()));
                 plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
-                itr -> pobierzNazwisko() = MetodyPomocnicze::wczytajLinie();
-                itr -> UstawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzNazwisko()));
+                itr -> UstawNazwisko(MetodyPomocnicze::wczytajLinie());
+                itr -> UstawNazwisko(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzNazwisko()));
                 plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
-                itr -> pobierzNumerTelefonu() = MetodyPomocnicze::wczytajLinie();
+                itr -> UstawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
                 plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
-                itr -> pobierzEmail() = MetodyPomocnicze::wczytajLinie();
+                itr -> UstawEmail(MetodyPomocnicze::wczytajLinie());
                 plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
-                itr -> pobierzAdres() = MetodyPomocnicze::wczytajLinie();
+                itr -> UstawAdres(MetodyPomocnicze::wczytajLinie());
                 plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '6':
