@@ -7,10 +7,11 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "Plik.h"
 
 using namespace std;
 
-class PlikZAdresatami
+class PlikZAdresatami: public Plik
 {
 
     const string NAZWA_PLIKU_Z_ADRESATAMI;
@@ -24,7 +25,6 @@ class PlikZAdresatami
     int edytujPlikTekstowyAdresatow(int idAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 
-    bool czyPlikJestPusty(fstream *plikTekstowy);
     string zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
 
