@@ -21,13 +21,12 @@ class PlikZAdresatami
     void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
-    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+    int edytujPlikTekstowyAdresatow(int idAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 
     bool czyPlikJestPusty(fstream *plikTekstowy);
     string zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 
 
@@ -38,7 +37,7 @@ public:
     void zapiszWszystkichAdresatowDoPliku(vector <Adresat> Adresaci);
     int pobierzIdOstatniegoAdresata();
     void usunWybranegoAdresata(int idUsuwanegoAdresata);
-    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
+    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat);
 
 };
 
