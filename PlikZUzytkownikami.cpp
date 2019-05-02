@@ -56,16 +56,6 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
 
 
 
-bool PlikZUzytkownikami::czyPlikJestPusty(fstream *plikTekstowy)
-{
-    plikTekstowy->seekg(0, ios::end);
-    if (plikTekstowy->tellg() == 0)
-        return true;
-    else
-        return false;
-}
-
-
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     fstream plikTekstowy;

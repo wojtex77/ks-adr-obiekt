@@ -70,17 +70,6 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneJednegoAdresataOddzielon
 }
 
 
-
-bool PlikZAdresatami::czyPlikJestPusty(fstream *plikTekstowy)
-{
-    plikTekstowy->seekg(0, ios::end);
-    if (plikTekstowy->tellg() == 0)
-        return true;
-    else
-        return false;
-}
-
-
 void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
     fstream plikTekstowy;
@@ -287,7 +276,6 @@ int PlikZAdresatami::edytujPlikTekstowyAdresatow(int idAdresata, string liniaZDa
 
 void PlikZAdresatami::zaktualizujDaneEdytowanegoAdresata(Adresat adresat)
 {
-    int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
 
     liniaZDanymiAdresata = zamienDaneAdresatowNaLinieZDanymiOddzielonaPionowymiKreskami(adresat);
