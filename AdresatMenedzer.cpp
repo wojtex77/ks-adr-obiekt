@@ -129,28 +129,28 @@ int AdresatMenedzer::edytujAdresata (){
                 cout << "Podaj nowe imie: ";
                 itr -> UstawImie(MetodyPomocnicze::wczytajLinie());
                 itr -> UstawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzImie()));
-                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
                 itr -> UstawNazwisko(MetodyPomocnicze::wczytajLinie());
                 itr -> UstawNazwisko(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzNazwisko()));
-                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 itr -> UstawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
-                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 itr -> UstawEmail(MetodyPomocnicze::wczytajLinie());
-                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 itr -> UstawAdres(MetodyPomocnicze::wczytajLinie());
-                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
